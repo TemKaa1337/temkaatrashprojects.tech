@@ -12,7 +12,7 @@ php artisan key:generate
 ```
 After that configure .env by changing your database credentials and set GITHUB_URL variable to your url.
 Example - https://api.github.com/users/{username}/repos
-Then change url in components\content\Content.js to your website url (if you are using `php artisan serve` comamnd then set it to `http://127.0.0.1:8000`)
+Then change url in `components\content\Content.js` to your website url (if you are using `php artisan serve` comamnd then set it to `http://127.0.0.1:8000`).
 Then type
 ```
 php artisan migrate:refresh
