@@ -1,0 +1,92 @@
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.content-container {
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0px 4px 0px 4px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.content-repositories {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin-top: 5px;
+}
+
+.repositories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.repository {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    grid-template-columns: 1fr;
+    padding: 5px;
+}
+
+.repo-name {
+    font-size: 20px;
+    font-style: sans-serif;
+}
+
+.repo-description {
+    font-size: 14px;
+}
+
+.repo-info {
+    padding: 2px;
+}
+
+.repo-info a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.repo-language {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.php {
+    background-color: #4F5D95;
+}
+
+.python {
+    background-color: #3572A5;
+}
+
+.html {
+    background-color: #e34c26;
+}
+
+.javasript {
+    background-color: #f1e05a;
+}
+
+.java {
+    background-color: #b07219;
+}
