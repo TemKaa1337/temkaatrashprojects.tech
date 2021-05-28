@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\RepositoryLanguage;
 use App\Models\RepositoryDemo;
 
 class Repository extends Model
@@ -20,5 +19,25 @@ class Repository extends Model
     public function demo() : ?RepositoryDemo
     {
         return $this->belongsTo(RepositoryDemo::class, 'project_id', 'id')->first();
+    }
+
+    public function getAllRepositories() : array
+    {
+        $result = [];
+        $repositories = self::orderBy('id')->with(['demo'])->get();
+
+        foreach ($repositories as $repository) {
+            $result[] = [
+                'id' => $repository->id,
+                'name' => $repository->name,
+                'description' => $repository->description,
+                'language' => $repository->language,
+                'repository_url' => $repository->repo_url,
+                'clone_url' => $repository->clone_url,
+                'demo_url' => $repository->demo->demo_url,
+            ];
+        }
+
+        return $result;
     }
 }

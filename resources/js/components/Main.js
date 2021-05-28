@@ -1,22 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Header from './header/Header';
-import Footer from './footer/Footer';
 import Content from './content/Content';
 
 import '../app.css';
 
-function Main() {
-    return (
-        <div className = 'content-container'>
-            <Header />
-            <Content />
-            <Footer />
-        </div>
-    );
-}
+export default class Main extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-export default Main;
+    render() {
+        return (
+            <div className = 'content-container'>
+                <Header />
+                <Content />
+            </div>
+        );
+    }
+}
 
 if (document.getElementById('app')) {
     ReactDOM.render(<Main />, document.getElementById('app'));

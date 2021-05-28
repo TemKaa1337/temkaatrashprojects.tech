@@ -32,15 +32,35 @@ __webpack_require__(/*! ./components/Main */ "./resources/js/components/Main.js"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Main)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _header_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./header/Header */ "./resources/js/components/header/Header.js");
-/* harmony import */ var _footer_Footer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./footer/Footer */ "./resources/js/components/footer/Footer.js");
-/* harmony import */ var _content_Content__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./content/Content */ "./resources/js/components/content/Content.js");
-/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../app.css */ "./resources/js/app.css");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _content_Content__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./content/Content */ "./resources/js/components/content/Content.js");
+/* harmony import */ var _app_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../app.css */ "./resources/js/app.css");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
@@ -50,17 +70,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-function Main() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
-    className: "content-container",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_header_Header__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_content_Content__WEBPACK_IMPORTED_MODULE_4__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(_footer_Footer__WEBPACK_IMPORTED_MODULE_3__.default, {})]
-  });
-}
+var Main = /*#__PURE__*/function (_Component) {
+  _inherits(Main, _Component);
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Main);
+  var _super = _createSuper(Main);
+
+  function Main(props) {
+    _classCallCheck(this, Main);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Main, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        className: "content-container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_header_Header__WEBPACK_IMPORTED_MODULE_2__.default, {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_content_Content__WEBPACK_IMPORTED_MODULE_3__.default, {})]
+      });
+    }
+  }]);
+
+  return Main;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
 
 if (document.getElementById('app')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)(Main, {}), document.getElementById('app'));
+  react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(Main, {}), document.getElementById('app'));
 }
 
 /***/ }),
@@ -74,186 +111,260 @@ if (document.getElementById('app')) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Content)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _Repository__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Repository */ "./resources/js/components/content/Repository.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
 
-function Content() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    className: "content-repositories",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "repositories",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "repository",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-name",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "financial-telegram-bot"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-description",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "repo-info",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
-            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
-              className: "repo-language php"
-            }), " PHP"]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot",
-            children: "Git"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot.git",
-            children: "Clone"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "http://temkaatrashprojects.tech",
-            children: "Demo"
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "repository",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-name",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "financial-telegram-bot"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-description",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "repo-info",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            children: "PHP"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot",
-            children: "Git"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot.git",
-            children: "Clone"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "http://temkaatrashprojects.tech",
-            children: "Demo"
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "repository",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-name",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "financial-telegram-bot"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-description",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "repo-info",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            children: "PHP"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot",
-            children: "Git"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot.git",
-            children: "Clone"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "http://temkaatrashprojects.tech",
-            children: "Demo"
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "repository",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-name",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "financial-telegram-bot"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-description",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "repo-info",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            children: "PHP"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot",
-            children: "Git"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot.git",
-            children: "Clone"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "http://temkaatrashprojects.tech",
-            children: "Demo"
-          })]
-        })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "repository",
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-name",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "financial-telegram-bot"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "repo-description",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-            children: "Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-          className: "repo-info",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            children: "PHP"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot",
-            children: "Git"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "https://github.com/TemKaa1337/financial-accounting-telegram-bot.git",
-            children: "Clone"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-            href: "http://temkaatrashprojects.tech",
-            children: "Demo"
-          })]
-        })]
-      })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {})]
-  });
-}
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Content);
+
+var Content = /*#__PURE__*/function (_Component) {
+  _inherits(Content, _Component);
+
+  var _super = _createSuper(Content);
+
+  function Content(props) {
+    var _this;
+
+    _classCallCheck(this, Content);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      error: null,
+      isLoaded: false,
+      repositories: []
+    };
+    return _this;
+  }
+
+  _createClass(Content, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      // const url = 'http://temkaatrashprojects.tech/api/get/repositories';
+      var url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail';
+      fetch(url).then(function (response) {
+        return response.json();
+      }).then(function (result) {
+        // this.setState({
+        //     isLoaded: true,
+        //     repositories: result
+        // });
+        _this2.setState({
+          isLoaded: true,
+          repositories: [{
+            id: 1,
+            name: 'financial-telegram-bot',
+            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
+            language: 'PHP',
+            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
+            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
+            demo_url: 'http://temkaatrashprojects.tech'
+          }, {
+            id: 2,
+            name: 'financial-telegram-bot',
+            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
+            language: 'PHP',
+            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
+            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
+            demo_url: 'http://temkaatrashprojects.tech'
+          }, {
+            id: 3,
+            name: 'financial-telegram-bot',
+            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
+            language: 'PHP',
+            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
+            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
+            demo_url: 'http://temkaatrashprojects.tech'
+          }, {
+            id: 4,
+            name: 'financial-telegram-bot',
+            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
+            language: 'PHP',
+            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
+            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
+            demo_url: 'http://temkaatrashprojects.tech'
+          }, {
+            id: 5,
+            name: 'financial-telegram-bot',
+            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
+            language: 'PHP',
+            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
+            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
+            demo_url: 'http://temkaatrashprojects.tech'
+          }]
+        });
+      }, function (error) {
+        _this2.setState({
+          isLoaded: true,
+          error: error
+        });
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          error = _this$state.error,
+          isLoaded = _this$state.isLoaded,
+          repositories = _this$state.repositories;
+
+      if (error) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("h1", {
+          children: ["An error occured. Message: ", error.message, "."]
+        });
+      }
+
+      if (!isLoaded) {
+        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
+          children: "Loading..."
+        });
+      }
+
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "content-repositories",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+          className: "repositories",
+          children: repositories.map(function (repository) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Repository__WEBPACK_IMPORTED_MODULE_1__.default, {
+              name: repository.name,
+              description: repository.description,
+              language: repository.language,
+              repositoryUrl: repository.repository_url,
+              cloneUrl: repository.clone_url,
+              demoUrl: repository.demo_url
+            }, repository.id);
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {})]
+      });
+    }
+  }]);
+
+  return Content;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
 
 /***/ }),
 
-/***/ "./resources/js/components/footer/Footer.js":
-/*!**************************************************!*\
-  !*** ./resources/js/components/footer/Footer.js ***!
-  \**************************************************/
+/***/ "./resources/js/components/content/Repository.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/content/Repository.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Repository)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-function Footer() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("h1", {});
-}
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Footer);
+
+var Repository = /*#__PURE__*/function (_Component) {
+  _inherits(Repository, _Component);
+
+  var _super = _createSuper(Repository);
+
+  function Repository(props) {
+    _classCallCheck(this, Repository);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Repository, [{
+    key: "render",
+    value: function render() {
+      var _this$props$demoUrl;
+
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "repository",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "repo-name",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            children: this.props.name
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "repo-description",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            children: this.props.description
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "repo-info",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+            children: [" ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: 'repo-language ' + this.props.language.toLowerCase()
+            }), " ", this.props.language]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: this.props.repositoryUrl,
+            children: "Git"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+            href: this.props.cloneUrl,
+            children: "Clone"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+            href: (_this$props$demoUrl = this.props.demoUrl) !== null && _this$props$demoUrl !== void 0 ? _this$props$demoUrl : '#',
+            children: ["Demo ", this.props.demoUrl ? '' : '(currently no demo link provided)']
+          })]
+        })]
+      });
+    }
+  }]);
+
+  return Repository;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
 
 /***/ }),
 
@@ -266,24 +377,63 @@ function Footer() {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */   "default": () => (/* binding */ Header)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 
 
-function Header() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    className: "navbar",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
-      href: "#",
-      children: "temkaatrashprojects.tech"
-    })
-  });
-}
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
+var Header = /*#__PURE__*/function (_Component) {
+  _inherits(Header, _Component);
+
+  var _super = _createSuper(Header);
+
+  function Header(props) {
+    _classCallCheck(this, Header);
+
+    return _super.call(this, props);
+  }
+
+  _createClass(Header, [{
+    key: "render",
+    value: function render() {
+      return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "navbar",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("a", {
+          href: "#",
+          children: "temkaatrashprojects.tech"
+        })
+      });
+    }
+  }]);
+
+  return Header;
+}(react__WEBPACK_IMPORTED_MODULE_0__.Component);
+
+
 
 /***/ }),
 
@@ -304,7 +454,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n    height: 100%;\n    width: 100%;\n}\n\n.content-container {\n    margin: 0;\n}\n\n.navbar {\n    overflow: hidden;\n    background-color: #333;\n}\n\n.navbar a {\n    float: left;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 0px 4px 0px 4px;\n    text-decoration: none;\n    font-size: 17px;\n}\n\n.content-repositories {\n    display: grid;\n    grid-template-columns: 10% 80% 10%;\n    margin-top: 5px;\n}\n\n.repositories {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n}\n\n.repository {\n    display: grid;\n    justify-content: center;\n    align-items: center;\n    border: 1px solid black;\n    border-radius: 3px;\n    margin: 5px;\n    grid-template-columns: 1fr;\n    padding: 5px;\n}\n\n.repo-name {\n    font-size: 20px;\n    font-style: sans-serif;\n}\n\n.repo-description {\n    font-size: 14px;\n}\n\n.repo-info {\n    padding: 2px;\n}\n\n.repo-info a {\n    display: inline-block;\n    margin-right: 10px;\n}\n\n.repo-language {\n    position: relative;\n    top: 1px;\n    display: inline-block;\n    width: 12px;\n    height: 12px;\n    border: 1px solid;\n    border-radius: 50%;\n}\n\n.php {\n    background-color: #4F5D95;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n    height: 100%;\n    width: 100%;\n}\n\n.content-container {\n    margin: 0;\n}\n\n.navbar {\n    overflow: hidden;\n    background-color: #333;\n}\n\n.navbar a {\n    float: left;\n    color: #f2f2f2;\n    text-align: center;\n    padding: 0px 4px 0px 4px;\n    text-decoration: none;\n    font-size: 17px;\n}\n\n.content-repositories {\n    display: grid;\n    grid-template-columns: 10% 80% 10%;\n    margin-top: 5px;\n}\n\n.repositories {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n}\n\n.repository {\n    display: grid;\n    justify-content: center;\n    align-items: center;\n    border: 1px solid black;\n    border-radius: 3px;\n    margin: 5px;\n    grid-template-columns: 1fr;\n    padding: 5px;\n}\n\n.repo-name {\n    font-size: 20px;\n    font-style: sans-serif;\n}\n\n.repo-description {\n    font-size: 14px;\n}\n\n.repo-info {\n    padding: 2px;\n}\n\n.repo-info a {\n    display: inline-block;\n    margin-right: 10px;\n}\n\n.repo-language {\n    position: relative;\n    top: 1px;\n    display: inline-block;\n    width: 12px;\n    height: 12px;\n    border: 1px solid;\n    border-radius: 50%;\n}\n\n.php {\n    background-color: #4F5D95;\n}\n\n.python {\n    background-color: #3572A5;\n}\n\n.html {\n    background-color: #e34c26;\n}\n\n.javasript {\n    background-color: #f1e05a;\n}\n\n.java {\n    background-color: #b07219;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
