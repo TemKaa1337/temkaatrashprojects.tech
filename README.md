@@ -3,8 +3,8 @@ Actually, this is a repo for my website, where my main projects are located with
 Sometimes (always) that are trash projects, that dont help community, but that's it.
 I will always add my new projects to this website, so it is always under developing...
 
-To install project on your machine clone the project.
-After that type
+To install project on your machine clone this project.
+After cloning project to your machine type
 ```
 cd temkaatrashprojects.tech
 mv .env.example .env
