@@ -24,13 +24,6 @@ class FetchRepository extends Command
     protected $description = 'Updates public information repos from TemKaa github';
 
     /**
-     * Api url of gitbuh repositories
-     *
-     * @var string
-     */
-    protected string $apiUrl = 'https://api.github.com/users/temkaa1337/repos';
-
-    /**
      * Create a new command instance.
      *
      * @return void
@@ -48,9 +41,10 @@ class FetchRepository extends Command
     public function handle()
     {
         // TODO add cron command to run this command once a day
-        $response = Http::get($this->apiUrl);
+        $response = Http::get(env('GITHUB_URL'));
 
         if ($response->status() == 200) {
+            dd($response->json());
             foreach ($response->json() as $repo) {
 
                 $repository = Repository::findByGitId($repo['id']);
@@ -75,7 +69,7 @@ class FetchRepository extends Command
                     $repository->save();
                 }
             }
-        }
+        } else echo "Error occured, got status code: {$response->status()}";
 
         return 0;
     }
