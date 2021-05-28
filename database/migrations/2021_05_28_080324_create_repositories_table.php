@@ -15,6 +15,11 @@ class CreateRepositoriesTable extends Migration
     {
         Schema::create('repositories', function (Blueprint $table) {
             $table->id();
+            $table->integer('git_id');
+            $table->string('name');
+            $table->string('repo_url');
+            $table->string('clone_url');
+            $table->string('description')->nullable();
             $table->timestamps();
         });
     }
