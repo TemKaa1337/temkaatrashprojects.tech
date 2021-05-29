@@ -44,13 +44,11 @@ class FetchRepository extends Command
         $response = Http::get(env('GITHUB_URL'));
 
         if ($response->status() == 200) {
-            dd($response->json());
             foreach ($response->json() as $repo) {
-
                 $repository = Repository::findByGitId($repo['id']);
 
                 if ($repository === null) {
-                    $repoId = Repository::insert([
+                    $repoId = Repository::insertGetId([
                         'git_id' => $repo['id'],
                         'name' => $repo['name'],
                         'repo_url' => $repo['html_url'],

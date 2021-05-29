@@ -16,7 +16,7 @@ class CreateRepositoryDemosTable extends Migration
         Schema::create('repository_demos', function (Blueprint $table) {
             $table->id();
             $table->integer('project_id');
-            $table->string('demo_url');
+            $table->string('demo_url')->nullable();
             $table->timestamps();
         });
     }

@@ -13,67 +13,15 @@ export default class Content extends Component {
     }
 
     componentDidMount() {
-        // const url = 'http://temkaatrashprojects.tech/api/get/repositories';
-        const url = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=Cocktail';
+        const url = 'http://127.0.0.1:8000/api/get/repositories';
 
         fetch(url)
         .then(response => response.json())
         .then(
             (result) => {
-                // this.setState({
-                //     isLoaded: true,
-                //     repositories: result
-                // });
-
                 this.setState({
                     isLoaded: true,
-                    repositories: [
-                        {
-                            id: 1,
-                            name: 'financial-telegram-bot',
-                            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
-                            language: 'PHP',
-                            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
-                            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
-                            demo_url: 'http://temkaatrashprojects.tech'
-                        },
-                        {
-                            id: 2,
-                            name: 'financial-telegram-bot',
-                            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
-                            language: 'PHP',
-                            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
-                            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
-                            demo_url: 'http://temkaatrashprojects.tech'
-                        },
-                        {
-                            id: 3,
-                            name: 'financial-telegram-bot',
-                            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
-                            language: 'PHP',
-                            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
-                            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
-                            demo_url: 'http://temkaatrashprojects.tech'
-                        },
-                        {
-                            id: 4,
-                            name: 'financial-telegram-bot',
-                            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
-                            language: 'PHP',
-                            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
-                            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
-                            demo_url: 'http://temkaatrashprojects.tech'
-                        },
-                        {
-                            id: 5,
-                            name: 'financial-telegram-bot',
-                            description: 'Bot that helps you to count your expenses and really helps ypu save so smuch money so you can buy a mazeratti and bentley',
-                            language: 'PHP',
-                            repository_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot',
-                            clone_url: 'https://github.com/TemKaa1337/financial-accounting-telegram-bot.git',
-                            demo_url: 'http://temkaatrashprojects.tech'
-                        },
-                    ]
+                    repositories: result
                 });
             },
             (error) => {

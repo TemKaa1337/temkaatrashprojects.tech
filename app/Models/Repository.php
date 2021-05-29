@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\RepositoryDemo;
 
@@ -16,9 +17,9 @@ class Repository extends Model
         return self::where('git_id', $gitId)->get()->first();
     }
 
-    public function demo() : ?RepositoryDemo
+    public function demo() : HasOne
     {
-        return $this->belongsTo(RepositoryDemo::class, 'project_id', 'id')->first();
+        return $this->hasOne(RepositoryDemo::class, 'project_id', 'id');
     }
 
     public function getAllRepositories() : array
