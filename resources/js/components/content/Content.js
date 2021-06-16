@@ -13,7 +13,7 @@ export default class Content extends Component {
     }
 
     componentDidMount() {
-        const url = 'http://127.0.0.1:8000/api/get/repositories';
+        const url = 'http://temkaatrashprojects.tech/api/get/repositories';
 
         fetch(url)
         .then(response => response.json())
