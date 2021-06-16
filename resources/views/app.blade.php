@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}" type="text/css">
 
-    <title>Document</title>
+    <title>My projects!</title>
 </head>
     <body>
         <div id = 'app'>
