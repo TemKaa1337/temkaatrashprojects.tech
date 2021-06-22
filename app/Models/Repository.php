@@ -25,7 +25,7 @@ class Repository extends Model
     public function getAllRepositories() : array
     {
         $result = [];
-        $repositories = self::orderBy('id')->with(['demo'])->get();
+        $repositories = self::orderBy('repo_created_at', 'desc')->with(['demo'])->get();
 
         foreach ($repositories as $repository) {
             $result[] = [
