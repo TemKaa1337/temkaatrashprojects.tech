@@ -59,6 +59,7 @@ export default class Content extends Component {
                                 repositoryUrl = {repository.repository_url}
                                 cloneUrl = {repository.clone_url}
                                 demoUrl = {repository.demo_url}
+                                createdAt = {repository.repo_created_at}
                             />
                         )
                     }
