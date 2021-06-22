@@ -54,7 +54,8 @@ class FetchRepository extends Command
                         'repo_url' => $repo['html_url'],
                         'clone_url' => $repo['clone_url'],
                         'description' => $repo['description'],
-                        'language' => $repo['language']
+                        'language' => $repo['language'],
+                        'repo_created_at' => date('Y-m-d H:i:s', strtotime($repo['language']))
                     ]);
 
                     RepositoryDemo::insert([

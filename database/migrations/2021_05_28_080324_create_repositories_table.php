@@ -20,6 +20,7 @@ class CreateRepositoriesTable extends Migration
             $table->string('repo_url');
             $table->string('clone_url');
             $table->string('language');
+            $table->dateTime('repo_created_at');
             $table->string('description')->nullable();
             $table->timestamps();
         });
