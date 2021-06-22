@@ -18,6 +18,7 @@ export default class Repository extends Component {
                     <a> <span className = {'repo-language ' + this.props.language.toLowerCase()}></span> {this.props.language}</a>
                     <a href = {this.props.repositoryUrl}>Git</a>
                     <a href = {this.props.cloneUrl}>Clone</a>
+                    <a>Created at: {this.props.createdAt}</a>
                     <a href = {this.props.demoUrl ?? '#'}>{this.props.demoUrl ? 'Demo' : '(currently no demo link provided)'}</a>
                 </div>
             </div>
