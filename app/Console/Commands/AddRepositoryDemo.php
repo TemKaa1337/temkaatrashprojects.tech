@@ -45,7 +45,7 @@ class AddRepositoryDemo extends Command
             $repo = Repository::find($repoId);
 
             if ($repo !== null) {
-                $demo = $repo->demo();
+                $demo = $repo->demo()->first();
 
                 $demo->demo_url = $demoPath;
                 $demo->save();
