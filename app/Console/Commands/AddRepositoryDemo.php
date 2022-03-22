@@ -50,9 +50,9 @@ class AddRepositoryDemo extends Command
                 $demo->demo_url = $demoPath;
                 $demo->save();
 
-                echo 'Successfully added demo path.';
-            } echo 'There is no existing repository with this id.';
-        } else echo 'Not enough arguments.';
+                echo 'Successfully added demo path.'.PHP_EOL;
+            } echo 'There is no existing repository with this id.'.PHP_EOL;
+        } else echo 'Not enough arguments.'.PHP_EOL;
 
         return 0;
     }
