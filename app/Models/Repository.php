@@ -13,21 +13,20 @@ class Repository extends Model
     protected $fillable = ['*'];
     public $dates = ['repo_created_at'];
 
-    public static function findByGitId(int $gitId) : ?self
+    public static function findByGitId(int $gitId): ?self
     {
         return self::where('git_id', $gitId)->get()->first();
     }
 
-    public function demo() : HasOne
+    public function demo(): HasOne
     {
         return $this->hasOne(RepositoryDemo::class, 'project_id', 'id');
     }
 
-    public function getAllRepositories() : array
+    public function getAllRepositories(): array
     {
         $result = [];
         $repositories = self::orderBy('repo_created_at', 'desc')->with(['demo'])->get();
-
         foreach ($repositories as $repository) {
             $result[] = [
                 'id' => $repository->id,
