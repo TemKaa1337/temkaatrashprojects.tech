@@ -41,19 +41,22 @@ class AddRepositoryDemo extends Command
         $repoId = $this->argument('repoId');
         $demoPath = $this->argument('demoPath');
 
-        if ($repoId !== null && $demoPath !== null) {
-            $repo = Repository::find($repoId);
+        if ($repoId === null || $demoPath === null) {
+            echo 'Not enough arguments.'.PHP_EOL;
+            return 0;
+        }
 
-            if ($repo !== null) {
-                $demo = $repo->demo()->first();
+        $repo = Repository::find($repoId);
+        if ($repo === null) {
+            echo 'There is no existing repository with this id.'.PHP_EOL;
+            return 0;
+        }
 
-                $demo->demo_url = $demoPath;
-                $demo->save();
+        $demo = $repo->demo()->first();
+        $demo->demo_url = $demoPath;
+        $demo->save();
 
-                echo 'Successfully added demo path.'.PHP_EOL;
-            } echo 'There is no existing repository with this id.'.PHP_EOL;
-        } else echo 'Not enough arguments.'.PHP_EOL;
-
+        echo 'Successfully added demo path.'.PHP_EOL;
         return 0;
     }
 }

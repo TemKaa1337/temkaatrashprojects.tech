@@ -11,6 +11,7 @@ class Repository extends Model
 {
     use HasFactory;
     protected $fillable = ['*'];
+    public $dates = ['repo_created_at'];
 
     public static function findByGitId(int $gitId) : ?self
     {
@@ -36,7 +37,7 @@ class Repository extends Model
                 'repository_url' => $repository->repo_url,
                 'clone_url' => $repository->clone_url,
                 'demo_url' => $repository->demo->demo_url,
-                'repo_created_at' => date('d.m.Y H:i:s', strtotime($repository->repo_created_at))
+                'repo_created_at' => $repository->repo_created_at->format('d.m.Y H:i:s')
             ];
         }
 

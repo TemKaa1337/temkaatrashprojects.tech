@@ -42,33 +42,33 @@ class FetchRepository extends Command
     {
         // TODO add cron command to run this command once a day
         $response = Http::get(env('GITHUB_URL'));
+        if ($response->status() !== 200) {
+            echo "Error occured, got status code: {$response->status()}";
+            return 0;
+        }
 
-        if ($response->status() == 200) {
-            foreach ($response->json() as $repo) {
-                $repository = Repository::findByGitId($repo['id']);
+        foreach ($response->json() as $repo) {
+            $repository = Repository::findByGitId($repo['id']);
+            if ($repository === null) {
+                $repoId = Repository::insertGetId([
+                    'git_id' => $repo['id'],
+                    'name' => $repo['name'],
+                    'repo_url' => $repo['html_url'],
+                    'clone_url' => $repo['clone_url'],
+                    'description' => $repo['description'],
+                    'language' => $repo['language'],
+                    'repo_created_at' => date('Y-m-d H:i:s', strtotime($repo['created_at']))
+                ]);
 
-                if ($repository === null) {
-                    $repoId = Repository::insertGetId([
-                        'git_id' => $repo['id'],
-                        'name' => $repo['name'],
-                        'repo_url' => $repo['html_url'],
-                        'clone_url' => $repo['clone_url'],
-                        'description' => $repo['description'],
-                        'language' => $repo['language'],
-                        'repo_created_at' => date('Y-m-d H:i:s', strtotime($repo['created_at']))
-                    ]);
-
-                    RepositoryDemo::insert([
-                        'project_id' => $repoId
-                    ]);
-
-                } else {
-                    $repository->language = $repo['language'];
-                    $repository->description = $repo['description'];
-                    $repository->save();
-                }
+                RepositoryDemo::insert([
+                    'project_id' => $repoId
+                ]);
+            } else {
+                $repository->language = $repo['language'];
+                $repository->description = $repo['description'];
+                $repository->save();
             }
-        } else echo "Error occured, got status code: {$response->status()}";
+        }
 
         return 0;
     }

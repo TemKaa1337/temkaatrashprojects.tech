@@ -8,7 +8,7 @@ use App\Models\Repository;
 
 class RepositoryController extends Controller
 {
-    public function index(Request $request) : Response
+    public function index(Request $request): Response
     {
         $repository = new Repository();
         $repositories = $repository->getAllRepositories();

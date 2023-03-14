@@ -38,16 +38,11 @@ class GetRepository extends Command
      */
     public function handle()
     {
-        $result = [];
-
         $repos = Repository::select('id', 'name')->get();
-
-        foreach ($repos as $repo) {
-            $result[] = "id: {$repo->id}, name: {$repo->name}";
-        }
-
+        $result = $repos->map(fn (Repository $repo): string => "id: {$repo->id}, name: {$repo->name}")
+            ->values()
+            ->all();
         echo 'List of existing repositories:'.PHP_EOL.implode(PHP_EOL, $result);
-
         return 0;
     }
 }
