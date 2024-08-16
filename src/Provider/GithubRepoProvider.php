@@ -21,7 +21,7 @@ final readonly class GithubRepoProvider
      */
     public function findAll(): array
     {
-        return $this->githubRepoRepository->findBy([], ['createdAt' => Sort::Desc->value]);
+        return $this->githubRepoRepository->findBy([], ['updatedAt' => Sort::Desc->value]);
     }
 
     public function findByName(string $name): GithubRepo
