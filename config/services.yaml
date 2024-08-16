@@ -1,0 +1,16 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        bind:
+            $githubUsername: '%env(GITHUB_USERNAME)%'
+            $websiteHost: '%env(WEBSITE_HOST)%'
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Enum/'
+            - '../src/Model/'
+            - '../src/Kernel.php'

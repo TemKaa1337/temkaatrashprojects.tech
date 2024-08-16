@@ -1,0 +1,17 @@
+<div class="repository">
+    <div class="repo-name">
+        <p>{{ repository.name }}</p>
+    </div>
+    <div class="repo-description">
+        <p>{{ repository.description }}</p>
+    </div>
+    <div class="repo-info">
+        {% set repoLanguage = repository.language ? repository.language.value : '' %}
+        <a> <span class="repo-language {{ repoLanguage|lower|default('') }}"></span> {{ repoLanguage ?: '(No language)' }} </a>
+        <a href="{{ repository.viewUrl }}">Git</a>
+        <a href="{{ repository.cloneUrl }}">Clone</a>
+        <a>Created at: {{ repository.createdAt|date('d.m.Y H:i:s') }}</a>
+        <a>Updated at: {{ repository.updatedAt|date('d.m.Y H:i:s') }}</a>
+        <a href = "{{ repository.demoUrl ?? '#' }}">{{ repository.demoUrl ? 'Demo' : '(currently no demo link provided)' }}</a>
+    </div>
+</div>

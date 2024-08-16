@@ -1,0 +1,108 @@
+html {
+    font-family: "Nunito Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #f8fafc;
+}
+
+.content-container {
+    margin: 0;
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    border-radius: 0 0 2px 2px;
+    display: flex;
+    padding: 0.6rem 1rem;
+}
+
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0 4px 0 4px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.content-repositories {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin-top: 5px;
+}
+
+.repositories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.repository {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border: 0.5px solid black;
+    border-radius: 3px;
+    margin: 5px;
+    grid-template-columns: 1fr;
+    padding: 5px;
+}
+
+.repository p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.repo-name {
+    font-size: 20px;
+}
+
+.repo-description {
+    font-size: 14px;
+}
+
+.repo-info {
+    padding: 2px;
+}
+
+.repo-info a {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.repo-language {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.php {
+    background-color: #4F5D95;
+}
+
+.python {
+    background-color: #3572A5;
+}
+
+.html {
+    background-color: #e34c26;
+}
+
+.javasript {
+    background-color: #f1e05a;
+}
+
+.java {
+    background-color: #b07219;
+}
