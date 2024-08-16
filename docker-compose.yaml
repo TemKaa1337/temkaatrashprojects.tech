@@ -1,0 +1,38 @@
+version: "3.9"
+
+services:
+    nginx:
+        image: nginx:1.17
+        container_name: temkaatrashprojects-nginx
+        depends_on:
+            - php
+        restart: always
+        volumes:
+            - ./:/srv/app
+            - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+        ports:
+            - ${BACKEND_EXTERNAL_PORT}:80
+
+    postgres:
+        image: postgres:16.3
+        container_name: temkaatrashprojects-postgres
+        environment:
+            POSTGRES_DB: ${DB_NAME}
+            POSTGRES_PASSWORD: ${DB_PASSWORD}
+            POSTGRES_USER: ${DB_USER}
+        ports:
+            - ${DB_EXTERNAL_PORT}:5432
+
+    php:
+        build:
+            context: .
+            args:
+                LINUX_USER_ID: ${LINUX_USER_ID:-1000}
+        container_name: temkaatrashprojects-php
+        depends_on:
+            - postgres
+        environment:
+            XDEBUG_CONFIG: client_host=${XDEBUG_REMOTE_HOST} client_port=${XDEBUG_REMOTE_PORT}
+            PHP_IDE_CONFIG: serverName=${SERVER_NAME}
+        volumes:
+            - ./:/srv/app
