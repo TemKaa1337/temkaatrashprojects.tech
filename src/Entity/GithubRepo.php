@@ -27,7 +27,6 @@ class GithubRepo
     private DateTimeImmutable $createdAt;
 
     #[Assert\NotBlank(message: ErrorCode::VALIDATION_CONSTRAINT_NOT_BLANK->value, allowNull: true)]
-    #[Assert\Url(message: ErrorCode::VALIDATION_CONSTRAINT_NOT_AN_URL->value)]
     #[ORM\Column(nullable: true)]
     private ?string $demoUrl = null;
 
