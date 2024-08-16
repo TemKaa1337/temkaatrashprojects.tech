@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace App\Provider;
 
 use App\Entity\GithubRepo;
+use App\Enum\Sort;
 use App\Exception\NotFoundException;
 use App\Repository\GithubRepoRepository;
 
@@ -20,7 +21,7 @@ final readonly class GithubRepoProvider
      */
     public function findAll(): array
     {
-        return $this->githubRepoRepository->findAll();
+        return $this->githubRepoRepository->findBy([], ['createdAt' => Sort::Desc->value]);
     }
 
     public function findByName(string $name): GithubRepo

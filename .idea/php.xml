@@ -248,6 +248,7 @@
   <component name="PhpUnit">
     <phpunit_settings>
       <phpunit_by_interpreter interpreter_id="62fbcfcd-ecc5-4322-b697-08506b07e97d" configuration_file_path="/srv/app/phpunit.xml.dist" custom_loader_path="/srv/app/vendor/autoload.php" phpunit_phar_path="" use_configuration_file="true" />
+      <PhpUnitSettings configuration_file_path="$PROJECT_DIR$/phpunit.xml.dist" custom_loader_path="$PROJECT_DIR$/vendor/autoload.php" use_configuration_file="true" />
     </phpunit_settings>
   </component>
   <component name="PsalmOptionsConfiguration">

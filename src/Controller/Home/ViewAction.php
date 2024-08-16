@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Controller\Home;
 
+use App\Provider\GithubRepoProvider;
 use App\Repository\GithubRepoRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -16,18 +17,17 @@ use Symfony\Component\Routing\Attribute\Route;
 final class ViewAction extends AbstractController
 {
     public function __construct(
-        private readonly GithubRepoRepository $githubRepoRepository,
+        private readonly GithubRepoProvider $githubRepoProvider,
         private readonly string $websiteHost,
     ) {
     }
 
     public function __invoke(): Response
     {
-        // TODO: naming strategy of database tables
         return $this->render(
             view: 'home.html.twig',
             parameters: [
-                'repositories' => $this->githubRepoRepository->findAll(),
+                'repositories' => $this->githubRepoProvider->findAll(),
                 'websiteHost'  => $this->websiteHost,
             ],
         );
