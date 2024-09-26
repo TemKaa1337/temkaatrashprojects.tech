@@ -10,4 +10,5 @@ enum Language: string
     case JavaScript = 'JavaScript';
     case Php = 'PHP';
     case Python = 'Python';
+    case Go = 'Go';
 }
