@@ -91,6 +91,10 @@ body {
     background-color: #4F5D95;
 }
 
+.go {
+    background-color: #00ADD8;
+}
+
 .python {
     background-color: #3572A5;
 }
@@ -99,7 +103,7 @@ body {
     background-color: #e34c26;
 }
 
-.javasript {
+.javascript {
     background-color: #f1e05a;
 }
 
